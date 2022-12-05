@@ -1,0 +1,9 @@
+<div #ddsLoading class="dds__loading-indicator__container" data-dds="loading-indicator">
+	<div class="dds__loading-indicator__overlay" [attr.aria-hidden]="!show"></div>
+	<div class="dds__loading-indicator__wrapper" [attr.aria-hidden]="!show">
+		<div class="dds__loading-indicator">
+			<div class="dds__loading-indicator__label" aria-live="polite">Processing… Please wait.</div>
+			<div class="dds__loading-indicator__spinner"></div>
+		</div>
+	</div>
+</div>

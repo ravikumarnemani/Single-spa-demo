@@ -1,0 +1,140 @@
+<div class="dds__row">
+  <div class="dds__col-12 dds__col--md-6 dds__col--lg-3 dds__mb-3"> 
+    <nav class="side-nav-wrapper"> 
+      <section class="dds__side-nav__wrapper" id="dexsidenav" data-dds="side-nav" aria-label="true">
+        <nav class="dds__side-nav" aria-label="Main Navigation">
+          <ul class="dds__side-nav__menu">
+            <li class="dds__side-nav__item">
+              <a routerLink="/standard-rules" >
+                <span class="dds__icon dds__side-nav__icon dds__icon--home"></span>
+                <span>standardrules</span>
+              </a>
+            </li>
+      
+            <li class="dds__side-nav__item">
+              <a [routerLink]="['standardrules']">
+                <span class="dds__icon dds__side-nav__icon dds__icon--home"></span>
+                <span>customrules</span>
+              </a>
+            </li>
+          </ul>
+            </nav>
+            <div class="dds__side-nav__toggle">
+              <button type="button" aria-label="collapse side navigation">
+                <span class="dds__icon dds__side-nav__icon dds__icon--chevron-left"></span>
+              </button>
+              <button type="button" aria-label="expand side navigation">
+                <span class="dds__icon dds__side-nav__icon dds__icon--chevron-right"></span>
+              </button>
+            </div>
+      </section>
+    </nav>
+</div>
+<div class="dds__col-12 dds__col--md-6 dds__col--lg-9 dds__mb-3">
+  <div class="dds__container-fluid dds__mt-4 dds__px-sm-2 dds__px-md-3 dds__px-lg-5">
+    <main  id="mainContent">
+      <div class="dds__w-100">
+          <router-outlet name="mainContent"></router-outlet>
+      </div>
+    </main>
+  </div>
+  </div>
+</div>
+
+
+
+<!-- <div role="table" id="table-756785993" data-dds="table" class="dds__table"></div>
+
+<div class="dds__pagination" data-dds="pagination" id="pagination-756785993" role="navigation" aria-label="pagination-pagination-756785993">
+  <div class="dds__pagination__summary">
+    <label class="dds__pagination__per-page-label" for="pagination-per-page-pagination-756785993">Items per page</label>
+    <div class="dds__select dds__select--sm dds__pagination__per-page-select" data-dds="select">
+      <div class="dds__select__wrapper">
+        <select class="dds__select__field" id="pagination-per-page-pagination-756785993">
+          <option value="4">4</option>
+          <option value="8">8</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+    </div>
+    <div class="dds__pagination__range" aria-live="polite">
+      <span class="dds__pagination__range-start"></span>
+      -
+      <span class="dds__pagination__range-end"></span>
+      <span class="dds__pagination__range-total-label">
+        of
+        <span class="dds__pagination__range-total"></span>
+        items
+      </span>
+    </div>
+  </div>
+  <div class="dds__pagination__nav">
+    <button
+      type="button"
+      class="dds__button dds__button--tertiary dds__button--sm dds__button__icon dds__pagination__first-page"
+      aria-label="First page"
+    ></button>
+    <button type="button" class="dds__button dds__button--tertiary dds__button--sm dds__pagination__prev-page" aria-label="Previous page">
+      <span class="dds__pagination__prev-page-label">Previous</span>
+    </button>
+    <div class="dds__pagination__page-range">
+      <label class="dds__pagination__page-range-label" for="pagination-current-page-pagination-756785993">Page</label>
+      <div class="dds__input-text__container dds__input-text__container--sm">
+        <div class="dds__input-text__wrapper dds__pagination__page-range-current-wrapper">
+          <input
+            class="dds__input-text dds__pagination__page-range-current"
+            type="text"
+            id="pagination-current-page-pagination-756785993"
+          />
+        </div>
+      </div>
+      <div class="dds__pagination__page-range-total-label">
+        of
+        <span class="dds__pagination__page-range-total"></span>
+      </div>
+    </div>
+    <button type="button" class="dds__button dds__button--tertiary dds__button--sm dds__pagination__next-page" aria-label="Next page">
+      <span class="dds__pagination__next-page-label">Next</span>
+    </button>
+    <button
+      type="button"
+      class="dds__button dds__button--tertiary dds__button--sm dds__button__icon dds__pagination__last-page"
+      aria-label="Last page"
+    ></button>
+  </div>
+</div> -->
+<!-- 
+<script>
+  const data = [[{"value":"Row 1"},{"value":"Row 1"},{"value":"Row 1"}],[{"value":"Row 2"},{"value":"Row 2"},{"value":"Row 2"}],[{"value":"Row 3"},{"value":"Row 3"},{"value":"Row 3"}],[{"value":"Row 4"},{"value":"Row 4"},{"value":"Row 4"}],[{"value":"Row 5"},{"value":"Row 5"},{"value":"Row 5"}],[{"value":"Row 6"},{"value":"Row 6"},{"value":"Row 6"}],[{"value":"Row 7"},{"value":"Row 7"},{"value":"Row 7"}],[{"value":"Row 8"},{"value":"Row 8"},{"value":"Row 8"}],[{"value":"Row 9"},{"value":"Row 9"},{"value":"Row 9"}],[{"value":"Row 10"},{"value":"Row 10"},{"value":"Row 10"}],[{"value":"Row 11"},{"value":"Row 11"},{"value":"Row 11"}],[{"value":"Row 12"},{"value":"Row 12"},{"value":"Row 12"}],[{"value":"Row 13"},{"value":"Row 13"},{"value":"Row 13"}],[{"value":"Row 14"},{"value":"Row 14"},{"value":"Row 14"}],[{"value":"Row 15"},{"value":"Row 15"},{"value":"Row 15"}],[{"value":"Row 16"},{"value":"Row 16"},{"value":"Row 16"}]];
+  const columns = [{"value":"Heading 1","sortBy":"none"},{"value":"Heading 2"},{"value":"Heading 3"}];
+
+  DDS.Pagination(document.getElementById("#pagination-756785993"), {
+      subscribe: ["table-756785993"],
+  });
+
+  DDS.Table(document.getElementById("#table-756785993"), {
+      data,
+      columns,
+      subscribe: ["pagination-756785993"],
+      pagination: {
+          currentPage: 1,
+          rowsPerPage: 4,
+      }
+  });
+</script> -->
+
+
+
+
+
+
+
+
+<!-- <div class="dds__template--productivity">
+  <div class="dds__w-100 dds__h-100 dds__position-absolute">
+      <div class="dds__loading-indicator">
+          <div class="dds__loading-indicator__spinner"></div>
+      </div>
+  </div> 
+  
+</div>-->
